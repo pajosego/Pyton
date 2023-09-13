@@ -21,7 +21,7 @@ selected_season = st.sidebar.selectbox ('Season' , ['2022/2021' , '2021/2020', '
 
 
   # WebScraping Football Data
-    def load_data(league, season):
+def load_data(league, season):
       
       if selected_league == 'England':
         league = 'E0'
@@ -44,8 +44,7 @@ selected_season = st.sidebar.selectbox ('Season' , ['2022/2021' , '2021/2020', '
       url = "https://www.football-data.co.uk/mmz4281/"+season+"/"+league+".csv"
       data = pd.read_csv(url)
       return data
-
-    df = load_data(selected_league, selected_season)
+df = load_data(selected_league, selected_season)
 
 
 
