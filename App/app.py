@@ -17,22 +17,37 @@ selected_season = st.sidebar.selectbox ('Season' , ['2022/2021' , '2021/2020', '
 # criar uma função para altearar as Leagues a e seasons de acordo com a nossa seleção que fizermos nos sidbars, 
 # def = cria a função
 # load_data = nome da função, funçao load_data serve para receber uma league e uma season para substituir na url esses campos
-      
+#para ler a função, utiliza-se a biblioteca pandas criando uma variavel data     
+
+
+
+# data frame
+   if selected_league == 'England':
+         league = 'E0'
+  if selected_league == 'Germany':
+         league = 'D1'
+  if selected_league == 'Italy':
+         league = 'I1'
+  if selected_league == 'Spain':
+         league = 'SP1'
+  if selected_league == 'France':
+         league = 'F1'
+
+
+if selected_season == '2021/2022':
+      season = '2022'
+if selected_season == '2020/2021':
+      season = '2021'
+if selected_season == '2019/2020':
+      season = '2020'
+
+
 def load_data(league, season): 
     url =  "https://www.football-data.co.uk/mmz4281/" +season+ "/" +league+ ".csv"
     data = pd.read_csv (url)
     return data
 
-#para ler a função, utiliza-se a biblioteca pandas criando uma variavel data
-
-
-
-
-# data frame
 df = load_data(selected_league, selected_season)
-
-
-
 
 
 
