@@ -20,14 +20,38 @@ selected_season = st.sidebar.selectbox ('Season' , ['2022/2021' , '2021/2020', '
       
 def load_data(league, season): 
     url =  "https://www.football-data.co.uk/mmz4281/" +season+ "/" +league+ ".csv"
+    data = pd.read_csv (url)
+    return data
 
 #para ler a função, utiliza-se a biblioteca pandas criando uma variavel data
 
-data = pd.read.csv(url)
-return data
+
+
 
 # data frame
 df = load_data(selected_league, selected_season)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
