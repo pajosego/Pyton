@@ -23,7 +23,7 @@ def load_data(league, season):
 
 #para ler a função, utiliza-se a biblioteca pandas criando uma variavel data
 
-data = pd.read_csv(url)
+data = pd.read.csv(url)
 return data
 
 # data frame
