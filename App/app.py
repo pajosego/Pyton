@@ -21,8 +21,8 @@ selected_season = st.sidebar.selectbox ('Season' , ['2022/2021' , '2021/2020', '
 
 
 df = load_data(selected_league, selected_season)
-# data frame
-   
+ if selected_league == 'England':
+         league = 'E0'  
   if selected_league == 'Germany':
          league = 'D1'
   if selected_league == 'Italy':
@@ -46,7 +46,7 @@ def load_data(league, season):
     data = pd.read_csv (url)
     return data
 
-df = load_data(selected_league, selected_season)
+
 
 
 
