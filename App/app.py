@@ -1,6 +1,6 @@
 # importar bibliotecas
 import streamlit as st
-import pansas as pd
+import pandas as pd
 import numpy as np
 
 #criar titulo utilizando a biblioteca streamlit
