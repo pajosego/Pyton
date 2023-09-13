@@ -20,7 +20,7 @@ selected_season = st.sidebar.selectbox ('Season' , ['2022/2021' , '2021/2020', '
 #para ler a função, utiliza-se a biblioteca pandas criando uma variavel data     
 
 
-
+df = load_data(selected_league, selected_season)
 # data frame
    
   if selected_league == 'Germany':
